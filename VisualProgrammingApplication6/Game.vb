@@ -3,24 +3,28 @@
 
         If btnanswer1.Checked Then
             MessageBox.Show("Correct...")
-            Score = Score + 1
-            MessageBox.Show("Your score is " + Score.ToString, "Good Job")
+            ''''''            Score = Score + 1
+            ''''''           MessageBox.Show("Your score is " + Score.ToString, "Good Job")
         Else
             MessageBox.Show("Incorrect", "Sorry")
         End If
 
         Me.Hide()
-        Form5.Show()
+        ''''''       Form5.Show()
 
 
     End Sub
 
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblScore.Text = "$" + Score.ToString
+        ''''''       lblScore.Text = "$" + Score.ToString
     End Sub
 
     Private Sub btnquit_Click(sender As Object, e As EventArgs) Handles btnquit.Click
-        MessageBox.Show("Your score is " + Score.ToString, "Goodbye")
+        ''''''       MessageBox.Show("Your score is " + Score.ToString, "Goodbye")
         Me.Close()
+    End Sub
+
+    Private Sub lblquestion_Click(sender As Object, e As EventArgs) Handles lblquestion.Click
+
     End Sub
 End Class

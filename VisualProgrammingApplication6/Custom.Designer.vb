@@ -27,15 +27,15 @@ Partial Class Custom
         Me.lblIncorrect1 = New System.Windows.Forms.Label()
         Me.lblIncorrect2 = New System.Windows.Forms.Label()
         Me.lblIncorrect3 = New System.Windows.Forms.Label()
-        Me.txtCorrectAnswer = New System.Windows.Forms.TextBox()
+        Me.txtCorrect = New System.Windows.Forms.TextBox()
         Me.txtIncorrect2 = New System.Windows.Forms.TextBox()
         Me.txtIncorrect3 = New System.Windows.Forms.TextBox()
         Me.txtIncorrect1 = New System.Windows.Forms.TextBox()
         Me.txtQuestionPrompt = New System.Windows.Forms.TextBox()
-        Me.lstCustQuestions = New System.Windows.Forms.ListBox()
         Me.btnSaveQuestion = New System.Windows.Forms.Button()
         Me.btnDiscard = New System.Windows.Forms.Button()
         Me.lblSavedQuestions = New System.Windows.Forms.Label()
+        Me.listCustomQuestions = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'lblPrompt
@@ -88,12 +88,12 @@ Partial Class Custom
         Me.lblIncorrect3.TabIndex = 8
         Me.lblIncorrect3.Text = "Incorrect Answer 3:"
         '
-        'txtCorrectAnswer
+        'txtCorrect
         '
-        Me.txtCorrectAnswer.Location = New System.Drawing.Point(137, 76)
-        Me.txtCorrectAnswer.Name = "txtCorrectAnswer"
-        Me.txtCorrectAnswer.Size = New System.Drawing.Size(159, 20)
-        Me.txtCorrectAnswer.TabIndex = 9
+        Me.txtCorrect.Location = New System.Drawing.Point(137, 76)
+        Me.txtCorrect.Name = "txtCorrect"
+        Me.txtCorrect.Size = New System.Drawing.Size(159, 20)
+        Me.txtCorrect.TabIndex = 9
         '
         'txtIncorrect2
         '
@@ -124,14 +124,6 @@ Partial Class Custom
         Me.txtQuestionPrompt.Size = New System.Drawing.Size(232, 57)
         Me.txtQuestionPrompt.TabIndex = 13
         '
-        'lstCustQuestions
-        '
-        Me.lstCustQuestions.FormattingEnabled = True
-        Me.lstCustQuestions.Location = New System.Drawing.Point(12, 234)
-        Me.lstCustQuestions.Name = "lstCustQuestions"
-        Me.lstCustQuestions.Size = New System.Drawing.Size(351, 121)
-        Me.lstCustQuestions.TabIndex = 14
-        '
         'btnSaveQuestion
         '
         Me.btnSaveQuestion.Location = New System.Drawing.Point(262, 179)
@@ -160,20 +152,29 @@ Partial Class Custom
         Me.lblSavedQuestions.TabIndex = 17
         Me.lblSavedQuestions.Text = "Saved Questions:"
         '
+        'listCustomQuestions
+        '
+        Me.listCustomQuestions.FormattingEnabled = True
+        Me.listCustomQuestions.Location = New System.Drawing.Point(29, 234)
+        Me.listCustomQuestions.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.listCustomQuestions.Name = "listCustomQuestions"
+        Me.listCustomQuestions.Size = New System.Drawing.Size(321, 108)
+        Me.listCustomQuestions.TabIndex = 18
+        '
         'Custom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(375, 362)
+        Me.Controls.Add(Me.listCustomQuestions)
         Me.Controls.Add(Me.lblSavedQuestions)
         Me.Controls.Add(Me.btnDiscard)
         Me.Controls.Add(Me.btnSaveQuestion)
-        Me.Controls.Add(Me.lstCustQuestions)
         Me.Controls.Add(Me.txtQuestionPrompt)
         Me.Controls.Add(Me.txtIncorrect1)
         Me.Controls.Add(Me.txtIncorrect3)
         Me.Controls.Add(Me.txtIncorrect2)
-        Me.Controls.Add(Me.txtCorrectAnswer)
+        Me.Controls.Add(Me.txtCorrect)
         Me.Controls.Add(Me.lblIncorrect3)
         Me.Controls.Add(Me.lblIncorrect2)
         Me.Controls.Add(Me.lblIncorrect1)
@@ -191,13 +192,14 @@ Partial Class Custom
     Friend WithEvents lblIncorrect1 As Label
     Friend WithEvents lblIncorrect2 As Label
     Friend WithEvents lblIncorrect3 As Label
-    Friend WithEvents txtCorrectAnswer As TextBox
+    Friend WithEvents txtCorrect As TextBox
     Friend WithEvents txtIncorrect2 As TextBox
     Friend WithEvents txtIncorrect3 As TextBox
     Friend WithEvents txtIncorrect1 As TextBox
     Friend WithEvents txtQuestionPrompt As TextBox
-    Friend WithEvents lstCustQuestions As ListBox
+    Friend WithEvents CustomQ As ListBox
     Friend WithEvents btnSaveQuestion As Button
     Friend WithEvents btnDiscard As Button
     Friend WithEvents lblSavedQuestions As Label
+    Friend WithEvents listCustomQuestions As ListBox
 End Class
